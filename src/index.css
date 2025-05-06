@@ -46,6 +46,23 @@
     --sidebar-border: 214 32% 91%;
     --sidebar-ring: 221 83% 53%;
   }
+  
+  .high-contrast {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    
+    --card: 0 0% 95%;
+    --card-foreground: 0 0% 0%;
+    
+    --border: 0 0% 40%;
+    --input: 0 0% 80%;
+    
+    --primary: 222 40% 40%;
+    --primary-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 80%;
+    --muted-foreground: 0 0% 10%;
+  }
 }
 
 @layer base {
@@ -81,5 +98,33 @@
   
   .glass-effect {
     @apply bg-white/80 backdrop-blur-sm;
+  }
+  
+  /* Utility classes for theme variations */
+  .theme-mint {
+    --primary: 152 47% 81%;
+    --accent: 270 5% 84%;
+    --secondary: 50 93% 81%;
+  }
+  
+  .theme-coral {
+    --primary: 0 42% 84%;
+    --accent: 50 93% 81%;
+    --secondary: 152 47% 81%;
+  }
+  
+  .theme-yellow {
+    --primary: 50 93% 81%;
+    --accent: 0 42% 84%;
+    --secondary: 270 5% 84%;
+  }
+  
+  /* Focus mode styles */
+  .focus-mode .sidebar-item:not(.focus-essential) {
+    @apply opacity-30;
+  }
+  
+  .focus-mode .dashboard-card:not(.focus-essential) {
+    @apply opacity-50;
   }
 }
