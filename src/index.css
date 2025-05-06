@@ -1,0 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 222 20% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 20% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 20% 18%;
+
+    --primary: 270 5% 84%;
+    --primary-foreground: 222 20% 18%;
+
+    --secondary: 50 93% 81%;
+    --secondary-foreground: 222 20% 18%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 152 47% 81%;
+    --accent-foreground: 222 20% 18%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 270 7% 85%;
+    --sidebar-foreground: 222 20% 18%;
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 33% 96%;
+    --sidebar-accent-foreground: 222 20% 18%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 221 83% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-academia-offwhite text-academia-charcoal font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair text-academia-navy;
+  }
+
+  code, pre {
+    @apply font-jetbrains;
+  }
+}
+
+@layer utilities {
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-academia-dustyblue focus:ring-opacity-50;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-academia-lavender to-academia-offwhite;
+  }
+  
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-sm;
+  }
+}
